@@ -17,8 +17,5 @@ public static void main(String[] args) {
     
     Student student=(Student)context.getBean("studentbean");
     student.displayInfo();  //Display method abc
-    
-    Employee s=(Employee)context.getBean("employeebean");  
-    s.show();  
 }  
 }  
