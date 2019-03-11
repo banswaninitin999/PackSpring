@@ -16,11 +16,13 @@ public static void main(String[] args) {
     //Student student=(Student)factory.getBean("studentbean");  
     
     Student student=(Student)context.getBean("studentbean");
-    student.displayInfo();  //Display method abc
+    student.displayInfo();  
     
     Employee s=(Employee)context.getBean("employeebean");  
     s.show();
     
+    Question q=(Question)context.getBean("question1");  
+    q.displayInfo();  
     
 }  
 }  
