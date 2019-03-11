@@ -24,16 +24,27 @@
 
 <bean id="question1" class="Question">  
 <constructor-arg value="111"></constructor-arg>  
-<constructor-arg value="Is this a collection dependency Injection ,if yes how does it work?"></constructor-arg>  
+<constructor-arg value="Is this a collection dependency Injection ,if yes how does it work?(Answer reference list)"></constructor-arg>  
 <constructor-arg>  
-<list>  
-<value>You can use list ,map ,set collections in the constructor arg</value>  
-<value>Simply use the list/map/set tag and describe value tag for each value</value>  
-<value>The display info uses the Iterator object which has the hasNext and next functions to check and retrieve values</value>  
+<list>
+<ref bean="answer1"/>  
+<ref bean="answer2"/>   
 </list>  
 </constructor-arg>  
 </bean>  
 
+
+<bean id="answer1" class="Answer">  
+<constructor-arg value="1"></constructor-arg>  
+<constructor-arg value="You can use list ,map ,set collections in the constructor arg /"></constructor-arg>  
+<constructor-arg value="Simply use the list/map/set tag and describe value tag for each value"></constructor-arg>  
+</bean>  
+  
+<bean id="answer2" class="Answer">  
+<constructor-arg value="2"></constructor-arg>  
+<constructor-arg value="The display info uses the Iterator object which has the hasNext and next functions to check and retrieve values /"></constructor-arg>  
+<constructor-arg value="This is a seperate example which uses two answers and passes a list of ref-ans in the question list argument"></constructor-arg>  
+</bean>  
 
   
 </beans>  
