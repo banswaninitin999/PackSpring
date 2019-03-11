@@ -22,6 +22,7 @@
 <constructor-arg><ref bean="address1"/></constructor-arg>   
 </bean>  
 
+<!-- Commenting out Dependency Injection with List (String and Object types) 
 <bean id="question1" class="Question">  
 <constructor-arg value="111"></constructor-arg>  
 <constructor-arg value="Is this a collection dependency Injection ,if yes how does it work?(Answer reference list)"></constructor-arg>  
@@ -45,6 +46,33 @@
 <constructor-arg value="The display info uses the Iterator object which has the hasNext and next functions to check and retrieve values /"></constructor-arg>  
 <constructor-arg value="This is a seperate example which uses two answers and passes a list of ref-ans in the question list argument"></constructor-arg>  
 </bean>  
-
+-->
+<bean id="answer1" class="Answer">  
+<constructor-arg value="1"></constructor-arg>  
+<constructor-arg value="You can use list ,map ,set collections in the constructor arg /"></constructor-arg>   
+</bean>  
+<bean id="answer2" class="Answer">  
+<constructor-arg value="2"></constructor-arg>  
+<constructor-arg value="Maps is used with key value pair basically two parameters"></constructor-arg>  
+</bean>  
   
+<bean id="user1" class="User">  
+<constructor-arg value="1"></constructor-arg>  
+<constructor-arg value="ABC"></constructor-arg>    
+</bean>  
+<bean id="user2" class="User">  
+<constructor-arg value="2"></constructor-arg>  
+<constructor-arg value="XYZ"></constructor-arg>   
+</bean>  
+  
+<bean id="question1" class="Question">  
+<constructor-arg value="1"></constructor-arg>  
+<constructor-arg value="Is this a map - collection dependency Injection ,if yes how does it work?(Answer reference list)"></constructor-arg>  
+<constructor-arg>  
+<map>  
+<entry key-ref="answer1" value-ref="user1"></entry>  
+<entry key-ref="answer2" value-ref="user2"></entry>  
+</map>  
+</constructor-arg>  
+</bean>  
 </beans>  

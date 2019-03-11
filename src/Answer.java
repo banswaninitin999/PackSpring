@@ -1,18 +1,19 @@
 
+import java.util.Date;  
+  
 public class Answer {  
 private int id;  
-private String name;  
-private String by;  
-  
+private String answer;  
+private Date postedDate;  
 public Answer() {}  
-public Answer(int id, String name, String by) {  
+public Answer(int id, String answer) {  
     super();  
     this.id = id;  
-    this.name = name;  
-    this.by = by;  
+    this.answer = answer;  
+   
 }  
   
 public String toString(){  
-    return id+" "+name+" "+by;  
+    return "Id:"+id+" Answer:"+answer;  
 }  
 }  
